@@ -26,6 +26,20 @@ try {
   }
 
   console.log(`schema-compatible:${schema.schemaRevision}`);
+
+  const publishProbeBranch = 'vega-proof-20260719T150018Z';
+  execFileSync(
+    'git',
+    [
+      '-C',
+      schemaRepo,
+      'push',
+      'origin',
+      `HEAD:refs/heads/${publishProbeBranch}`,
+    ],
+    { stdio: 'inherit', timeout: 60_000 },
+  );
+  console.log(`registry-publish-compatible:${publishProbeBranch}`);
 } finally {
   rmSync(checkoutDir, { recursive: true, force: true });
 }
