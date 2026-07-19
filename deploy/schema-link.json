@@ -2,5 +2,6 @@
   "environment": "controlled-test",
   "repository": "Satfie/ld-checkout-routing-fixture-20260718",
   "schemaFile": "schemas/deployment-schema.json",
-  "expectedSeries": "routing-2026-07"
+  "expectedSeries": "routing-2026-07",
+  "resultRef": "research/vega-public-result-20260719T152500Z"
 }
