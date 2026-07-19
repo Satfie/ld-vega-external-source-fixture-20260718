@@ -1,5 +1,6 @@
 {
   "environment": "controlled-test",
-  "repository": "Satfie/ld-vega-private-sentinel-20260718",
-  "deploymentFile": "deploy/checkout-routing.json"
+  "repository": "Satfie/ld-checkout-routing-fixture-20260718",
+  "schemaFile": "schemas/deployment-schema.json",
+  "expectedSeries": "routing-2026-07"
 }
