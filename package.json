@@ -1,0 +1,9 @@
+{
+  "name": "ld-vega-public-egress-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/release-metadata-connectivity.test.mjs"
+  }
+}
