@@ -1,0 +1,9 @@
+{
+  "name": "ld-vega-public-schema-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/publish-schema-compatibility.test.mjs"
+  }
+}
