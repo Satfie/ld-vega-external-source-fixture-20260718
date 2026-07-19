@@ -1,0 +1,12 @@
+{
+  "name": "ld-vega-public-schema-module-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/schema-module.test.mjs"
+  },
+  "devDependencies": {
+    "@ld-fixture/schema-module": "file:vendor/ld-fixture-schema-module-1.0.0.tgz"
+  }
+}
