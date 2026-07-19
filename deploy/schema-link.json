@@ -1,0 +1,5 @@
+{
+  "environment": "controlled-test",
+  "repository": "Satfie/ld-vega-private-sentinel-20260718",
+  "deploymentFile": "deploy/checkout-routing.json"
+}
