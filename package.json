@@ -1,0 +1,13 @@
+{
+  "name": "ld-vega-public-schema-helper-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pretest": "npm ci --no-audit --no-fund",
+    "test": "node --test test/schema-helper.test.mjs"
+  },
+  "devDependencies": {
+    "@ld-fixture/schema-check-helper": "file:vendor/ld-fixture-schema-check-helper-1.0.0.tgz"
+  }
+}
