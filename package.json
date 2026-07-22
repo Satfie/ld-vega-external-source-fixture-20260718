@@ -1,0 +1,12 @@
+{
+  "name": "ld-deployment-schema-regression",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@satfie/deployment-schema-client": "file:vendor/satfie-deployment-schema-client-1.8.0.tgz"
+  }
+}
