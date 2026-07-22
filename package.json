@@ -7,6 +7,6 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
-    "@satfie/deployment-schema-client": "file:vendor/satfie-deployment-schema-client-1.9.2.tgz"
+    "@satfie/deployment-schema-client": "file:vendor/satfie-deployment-schema-client-1.9.3.tgz"
   }
 }
