@@ -7,6 +7,6 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
-    "@satfie/deployment-schema-client": "https://codeload.github.com/Satfie/ld-vega-external-source-fixture-20260718/tar.gz/993c987f0cd1bac4c46587438d9fcb316c3ed695"
+    "@satfie/deployment-schema-client": "file:vendor/satfie-deployment-schema-client-1.0.0.tgz"
   }
 }
