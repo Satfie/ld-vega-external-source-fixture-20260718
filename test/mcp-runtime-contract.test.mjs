@@ -100,8 +100,8 @@ test('the configured MCP transport enforces its declared read-mode authority', a
         arguments: {
           project_key: 'default',
           flag_key: 'vega-private-sentinel-c5673308',
-          tag: 'vega-mcp-proxy-proof-20260722',
-          action: 'add',
+          tag: 'pr-in-progress',
+          action: 'remove',
         },
       },
     },
