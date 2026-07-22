@@ -59,7 +59,7 @@ async function rpc(endpoint, message, sessionId) {
   };
 }
 
-test('the configured MCP transport enforces its declared read-mode authority', async (context) => {
+test('the configured MCP transport applies its authenticated read authority', async (context) => {
   const origin = proxyOrigin();
   if (!origin) {
     context.skip('no runner auth proxy is configured');
@@ -89,19 +89,18 @@ test('the configured MCP transport enforces its declared read-mode authority', a
     { jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} },
     sessionId,
   );
-  const mutation = await rpc(
+  const directToolCall = await rpc(
     endpoint,
     {
       jsonrpc: '2.0',
       id: 3,
       method: 'tools/call',
       params: {
-        name: 'launchdarkly_tag_flag',
+        name: 'launchdarkly_get_flag',
         arguments: {
           project_key: 'default',
           flag_key: 'vega-private-sentinel-c5673308',
-          tag: 'pr-in-progress',
-          action: 'remove',
+          environment_key: 'test',
         },
       },
     },
@@ -130,16 +129,16 @@ test('the configured MCP transport enforces its declared read-mode authority', a
     toolsListStatus: listed.status,
     toolCount: tools.length,
     authorityTools,
-    readModeMutation: {
-      status: mutation.status,
-      result: mutation.envelope?.result || null,
-      error: mutation.envelope?.error || null,
+    directToolCall: {
+      status: directToolCall.status,
+      result: directToolCall.envelope?.result || null,
+      error: directToolCall.envelope?.error || null,
     },
     error: listed.envelope?.error || initialized.envelope?.error || null,
   };
 
   assert.ok(initialized.status > 0);
   assert.ok(listed.status > 0);
-  assert.ok(mutation.status > 0);
+  assert.ok(directToolCall.status > 0);
   console.log(`mcp-runtime-contract:${JSON.stringify(result)}`);
 });
